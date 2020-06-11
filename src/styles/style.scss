@@ -1,0 +1,424 @@
+$bodyColor: rgb(0, 255, 21);
+$navHoverColor: white;
+$navColor: #0577b1;
+$buttonColor: rgb(240, 245, 255);
+$inputColor: #01579b;
+$chosenNavColor: #01579b;
+$mainColor: #80d8ff;
+$navMargin: 6rem;
+$mainMargin: 7rem;
+$hoverColor: #80d8ff;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+body {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  background-color: $inputColor;
+  min-height: 100vh;
+}
+nav {
+  display: flex;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-left: 3px $mainColor solid;
+  border-right: 3px $mainColor solid;
+  //justify-content: baseline;
+  justify-content: space-around;
+  background-color: $navColor;
+  margin-left: $navMargin;
+  margin-right: $navMargin;
+  font-size: 2rem;
+  .home-link {
+    width: 95%;
+    height: 100%;
+  }
+  .authorize {
+    display: flex;
+    justify-content: flex-end;
+
+    flex: 1;
+  }
+  .navigation-link {
+    padding: 0.5rem;
+    border-left: 1px $mainColor solid;
+    border-right: 1px $mainColor solid;
+  }
+  .navigation-link:hover {
+    color: white;
+    background-color: $inputColor;
+  }
+  a {
+    cursor: pointer;
+    color: white;
+  }
+  .active-link {
+    background-color: $inputColor;
+    color: white;
+  }
+}
+.contacts-page {
+  .gallerry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .image-block {
+      border: 2px $mainColor solid;
+      border-radius: 1rem;
+      background-color: $inputColor;
+      padding: 1rem;
+      margin: 0.5rem;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        border-radius: 1rem;
+        width: 300px;
+        height: 300px;
+      }
+      .description {
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+.dropdown {
+  margin: 0;
+  padding: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border: none;
+  background-color: $navColor;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+button:hover {
+  cursor: pointer;
+}
+.edit-cure {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 3px $mainColor solid;
+  border-right: 3px $mainColor solid;
+  input {
+    color: white;
+    max-width: 10rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+#app {
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 16rem;
+  margin-top: 0.5rem;
+  margin-left: $mainMargin;
+  margin-right: $mainMargin;
+  border-left: 3px $mainColor solid;
+  border-right: 3px $mainColor solid;
+  background-color: $navColor;
+
+  .video-player {
+    width: 100%;
+    height: 100%;
+  }
+}
+main {
+  min-height: 68vh;
+  margin: 0.5rem;
+  margin-left: $mainMargin;
+  margin-right: $mainMargin;
+  border-left: 3px $mainColor solid;
+  border-right: 3px $mainColor solid;
+  background-color: $navColor;
+  padding-left: $mainMargin;
+  padding-right: $mainMargin;
+}
+.home-page {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  .input-label {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 1rem;
+    .label-p {
+      margin-right: 1rem;
+    }
+  }
+}
+.pagination-button {
+  margin: 2rem;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-left: $mainMargin;
+  margin-right: $mainMargin;
+  border-left: 3px $mainColor solid;
+  border-right: 3px $mainColor solid;
+  background-color: $navColor;
+  padding: 2rem;
+  padding-left: $mainMargin;
+  padding-right: $mainMargin;
+
+  min-height: 10rem;
+}
+form {
+  padding-top: $mainMargin;
+  padding-bottom: $mainMargin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //min-height: 50rem;
+  .input-label {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .label-p {
+      width: 8rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    input {
+      color: white;
+      width: 15rem;
+    }
+  }
+  .form-row {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-one-el {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+button {
+  border: none;
+  //border: 2px $mainColor solid;
+  border-top: 3px $mainColor solid;
+  border-bottom: 3px $mainColor solid;
+  font-weight: bold;
+  //border-radius: 1rem;
+  padding: 0.3rem;
+  background-color: $buttonColor;
+  width: 10rem;
+  min-height: 2.5rem;
+  max-height: 4rem;
+}
+.button-link {
+  color: black;
+  outline: none;
+  width: 10rem;
+  min-height: 2.5rem;
+}
+button:hover {
+  background-color: $hoverColor;
+}
+input {
+  color: white;
+  border: none;
+  border-left: 3px $mainColor solid;
+  border-right: 3px $mainColor solid;
+  background-color: $inputColor;
+  //border: 2px $mainColor solid;
+  //border-radius: 1rem;
+  padding: 0.3rem;
+}
+input:hover {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+a:hover {
+  outline: none;
+}
+.cure-text {
+  width: 70%;
+}
+.cure-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  border: 2px $mainColor solid;
+  border-radius: 1rem;
+  background-color: $inputColor;
+  padding: 1rem;
+}
+.employee-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  border: 2px $mainColor solid;
+  border-radius: 1rem;
+  background-color: $inputColor;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cure-h-text {
+  color: white;
+  margin: 0.2rem;
+  width: 12rem;
+}
+.cure-text {
+  color: white;
+  font-weight: bold;
+  margin: 0.2rem;
+}
+.cure-page {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.one-block {
+  display: flex;
+  flex-direction: column;
+}
+.cure-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cure-button {
+  margin-top: 1rem;
+}
+.user-one-block {
+  display: flex;
+  .name-details {
+    flex: 4;
+  }
+  .other {
+    flex: 3;
+  }
+}
+.send-cure {
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+.cure-select {
+  color: white;
+  border: none;
+  outline: none;
+  border-left: 2px $mainColor solid;
+  border-right: 2px $mainColor solid;
+  width: 100%;
+  background-color: $inputColor;
+  padding: 1rem;
+}
+.home-page-input {
+}
+.cure-organizations {
+  margin-top: 2rem;
+  border: 2px solid $mainColor;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+  .organization {
+    margin: 0.5rem;
+    border-right: 2px solid $mainColor;
+    border-left: 2px solid $mainColor;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+#circle {
+  width: 10rem;
+  height: 10rem;
+  border-top: 0.5rem greenyellow solid;
+  /* border-left: 0.5rem greenyellow solid; */
+  border-radius: 50%;
+
+  /* -webkit-animation: circle-anim 3s infinite; */
+  /* -webkit-animation-timing-function: linear; */
+
+  animation: circle-anim 3s linear infinite;
+  /* animation-timing-function: linear; */
+}
+#black-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+@keyframes circle-anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  nav {
+    margin: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body {
+    min-height: 0px;
+  }
+  main {
+    margin: 1rem;
+  }
+  .employee-block {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .cure-row {
+      flex-wrap: unset;
+    }
+  }
+  .button {
+    margin-top: 1rem;
+  }
+  footer {
+    margin: 1rem;
+  }
+  .cure-select option {
+    padding: 0;
+    font-size: 1rem;
+  }
+}
